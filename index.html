@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xX_N30_H4x0r_Xx Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hacker-green: #0f0;
+            --hacker-dark: #0a0a0a;
+            --alert-red: #ff3333;
+        }
+        body {
+            background-color: var(--hacker-dark);
+            color: var(--hacker-green);
+            font-family: 'Share Tech Mono', monospace;
+            overflow-x: hidden;
+        }
+        .font-pixel {
+            font-family: 'VT323', monospace;
+        }
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        /* Glitch effect for headers */
+        .glitch {
+            position: relative;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px var(--hacker-green);
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hacker-dark);
+        }
+        .glitch::before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            left: -2px;
+            text-shadow: -1px 0 blue;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(65px, 9999px, 10px, 0); }
+            100% { clip: rect(10px, 9999px, 100px, 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(12px, 9999px, 30px, 0); }
+            100% { clip: rect(80px, 9999px, 10px, 0); }
+        }
+        
+        .terminal-box {
+            border: 1px solid var(--hacker-green);
+            background: rgba(0, 20, 0, 0.9);
+            box-shadow: 0 0 10px var(--hacker-green);
+        }
+        
+        .defacement-card {
+            background: #000;
+            border: 3px solid red;
+            color: white;
+            text-align: center;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Intentionally bad font choice for kiddie */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <canvas id="matrix" class="matrix-bg"></canvas>
+
+    <!-- Nav/Header -->
+    <header class="p-6 border-b border-green-700 bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="glitch font-pixel tracking-widest" data-text="xX_N30_H4x0r_Xx">xX_N30_H4x0r_Xx</div>
+            <div class="text-xs md:text-sm text-green-400 blink">ACCESS_LEVEL: ROOT... [CONNECTED]</div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        
+        <!-- 1. PROFILE & MOTIVE -->
+        <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="terminal-box p-6 rounded relative">
+                <div class="absolute top-2 left-2 flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 mt-4 text-white border-b border-green-500 pb-2">> WHO_AM_I?</h2>
+                <p class="mb-4 typing-effect">
+                    <span class="text-green-300">User:</span> Script Kiddie (Skid)<br>
+                    <span class="text-green-300">Skill Level:</span> Low / Non-existent<br>
+                    <span class="text-green-300">Motto:</span> "I don't write the code, I just run it."
+                </p>
+                <h3 class="text-xl font-bold text-white mt-6">> MOTIVE (WHY)</h3>
+                <ul class="list-disc list-inside text-green-200 ml-2 mt-2">
+                    <li>Seeking attention & "clout" on forums.</li>
+                    <li>Trying to impress friends/peers.</li>
+                    <li>Anger/Revenge (e.g., banned from a game server).</li>
+                    <li>Curiosity without understanding.</li>
+                </ul>
+            </div>
+
+            <div class="terminal-box p-6 rounded">
+                 <h2 class="text-2xl font-bold mb-4 text-white border-b border-green-500 pb-2">> TACTICS & TARGETS</h2>
+                 <div class="space-y-4">
+                    <div>
+                        <strong class="text-yellow-400">[TACTICS - HOW]</strong>
+                        <p class="text-sm mt-1">Using easy-to-find, pre-made tools (LOIC, DDOS scripts, SQLi Dumper) downloaded from public forums. No custom coding.</p>
+                    </div>
+                    <div>
+                        <strong class="text-yellow-400">[TARGET - WHO]</strong>
+                        <p class="text-sm mt-1">Soft targets. School websites, Minecraft servers, small business pages, or anyone who made me mad in a chat room.</p>
+                    </div>
+                    <div>
+                        <strong class="text-yellow-400">[IMPACT - SO WHAT]</strong>
+                        <p class="text-sm mt-1">Temporary denial of service (lag), website defacement (graffiti), or account lockouts. Usually annoyance rather than destruction.</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 2. ARTIFACTS -->
+        <h2 class="text-3xl font-bold mb-6 text-center text-white glitch" data-text="EVIDENCE_LOGS">EVIDENCE_LOGS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <!-- Artifact 1: Brag Card -->
+            <div class="bg-gray-900 p-1 border-2 border-green-600 rounded shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="bg-black p-4 h-full flex flex-col justify-center items-center text-center">
+                    <div class="text-red-600 font-bold text-4xl mb-2 font-pixel">PWNED!!</div>
+                    <p class="text-white mb-4">HACKED BY xX_D4rk_Soul_Xx</p>
+                    <p class="text-gray-400 text-sm">"Security is a illusion. I own u now."</p>
+                    <p class="text-gray-500 text-xs mt-4 border-t border-gray-700 pt-2 w-full">#OpPayback #Lulz #Defaced</p>
+                    <div class="mt-4 text-xs text-green-500">[Artifact 1: The Defacement "Brag" Page]</div>
+                </div>
+            </div>
+
+            <!-- Artifact 2: Tool Mockup -->
+            <div class="bg-gray-800 border border-gray-600 rounded p-4 shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="bg-gray-200 text-black px-2 py-1 text-xs font-bold mb-2 flex justify-between">
+                    <span>Super_DDOS_V3.exe</span>
+                    <span>[X]</span>
+                </div>
+                <div class="space-y-3 bg-gray-100 p-3 rounded text-black font-sans text-sm">
+                    <div class="flex justify-between items-center">
+                        <span>Target IP:</span>
+                        <input type="text" value="192.168.1.1" class="border px-1 w-24 bg-white" readonly>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Port:</span>
+                        <input type="text" value="80" class="border px-1 w-12 bg-white" readonly>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Method:</span>
+                        <select class="border bg-white text-xs"><option>UDP FLOOD</option></select>
+                    </div>
+                    <button class="w-full bg-red-600 text-white font-bold py-2 hover:bg-red-700 border-b-4 border-red-800 active:border-0">IMMA CHARGIN MAH LAZER!!</button>
+                </div>
+                <div class="mt-4 text-xs text-center text-green-500 font-mono">[Artifact 2: The "Skid" Tool GUI]</div>
+            </div>
+
+            <!-- Artifact 3: Chat Log -->
+            <div class="bg-indigo-900 border border-indigo-500 rounded p-4 shadow-lg transform hover:scale-105 transition duration-300 flex flex-col">
+                <div class="text-xs text-indigo-200 border-b border-indigo-700 pb-1 mb-2">#hacker-lounge (Discord)</div>
+                <div class="flex-grow space-y-2 text-xs font-mono overflow-y-auto h-32 bg-black/30 p-2 rounded">
+                    <p><span class="text-red-400 font-bold">DemonKing:</span> guys how do i use nmap?</p>
+                    <p><span class="text-green-400 font-bold">xX_N30_Xx:</span> lol n00b. check this out.</p>
+                    <p><span class="text-green-400 font-bold">xX_N30_Xx:</span> I just took down my school server with LOIC.</p>
+                    <p><span class="text-green-400 font-bold">xX_N30_Xx:</span> Site is giving 503 errors. I am a god.</p>
+                    <p><span class="text-blue-400">Admin:</span> You just DDOSed localhost, idiot.</p>
+                </div>
+                <div class="mt-4 text-xs text-center text-green-500 font-mono">[Artifact 3: The "Clout" Chat Log]</div>
+            </div>
+        </div>
+
+        <!-- 3. TIMELINE -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-white border-l-4 border-green-500 pl-4">> ATTACK_TIMELINE</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+                
+                <!-- Step 1 -->
+                <div class="w-full bg-black border border-green-800 p-4 rounded hover:bg-green-900/20 transition">
+                    <div class="text-4xl mb-2">🔍</div>
+                    <h3 class="font-bold text-green-400 text-lg">1. RECON</h3>
+                    <p class="text-sm text-gray-400">Googles "how to hack website" or searches YouTube for "best ddos tool 2025". Finds a tool on a sketchy forum.</p>
+                </div>
+
+                <div class="hidden md:block text-green-600 text-2xl">➜</div>
+
+                <!-- Step 2 -->
+                <div class="w-full bg-black border border-green-800 p-4 rounded hover:bg-green-900/20 transition">
+                    <div class="text-4xl mb-2">💾</div>
+                    <h3 class="font-bold text-green-400 text-lg">2. DELIVERY</h3>
+                    <p class="text-sm text-gray-400">Downloads the tool (often infecting themselves). Inputs the target URL and hits the big red button.</p>
+                </div>
+
+                <div class="hidden md:block text-green-600 text-2xl">➜</div>
+
+                <!-- Step 3 -->
+                <div class="w-full bg-black border border-green-800 p-4 rounded hover:bg-green-900/20 transition">
+                    <div class="text-4xl mb-2">💥</div>
+                    <h3 class="font-bold text-green-400 text-lg">3. IMPACT</h3>
+                    <p class="text-sm text-gray-400">Target website slows down slightly. Attacker takes a screenshot, posts it on Discord, and claims to be "Anonymous".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DEFENDER BOX -->
+        <section class="bg-blue-900/20 border border-blue-500 p-6 rounded-lg mt-10">
+            <h2 class="text-xl font-bold text-blue-400 flex items-center mb-4">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                DEFENSE_COUNTERMEASURES
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-blue-100">
+                <div class="bg-blue-900/40 p-3 rounded">
+                    <strong>1. Web Application Firewall (WAF)</strong>
+                    <p class="text-xs mt-1 opacity-75">Blocks common automated attack signatures and known bad scripts instantly.</p>
+                </div>
+                <div class="bg-blue-900/40 p-3 rounded">
+                    <strong>2. Rate Limiting</strong>
+                    <p class="text-xs mt-1 opacity-75">Prevents a single user from spamming requests (DDOS/Brute force) by capping traffic.</p>
+                </div>
+                <div class="bg-blue-900/40 p-3 rounded">
+                    <strong>3. Input Validation</strong>
+                    <p class="text-xs mt-1 opacity-75">Sanitizing all inputs prevents copy-paste SQL Injection exploits.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-green-900 p-4 text-center text-green-700 text-xs font-mono">
+        Assignment: Portray the Attacker // Type: Script Kiddie // Status: DETECTED
+    </footer>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const alphabet = katakana + latin + nums;
+
+        const fontSize = 16;
+        const columns = canvas.width/fontSize;
+
+        const rainDrops = [];
+
+        for( let x = 0; x < columns; x++ ) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+
+                if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
